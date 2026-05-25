@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commerce Thikana | Elite Education by Surya Kant Sharma</title>
+    <title>Commerce Thikana | Premium Coaching by Surya Kant Sharma</title>
     
     <!-- Premium Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -33,7 +33,6 @@
 
         h1, h2, h3 { font-family: 'Poppins', sans-serif; letter-spacing: -0.5px; }
 
-        /* --- BACKGROUND PARTICLES --- */
         #particle-canvas {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1; pointer-events: none;
@@ -64,17 +63,10 @@
         }
         .nav-links a:hover { color: var(--gold); }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero {
             height: 100vh; display: flex; align-items: center; justify-content: center;
             text-align: center; padding: 0 2rem;
-        }
-        .hero-content { max-width: 900px; }
-        .hero-badge {
-            display: inline-block; padding: 6px 18px; border: 1px solid var(--gold);
-            border-radius: 50px; color: var(--gold); font-size: 0.75rem;
-            text-transform: uppercase; letter-spacing: 2px; margin-bottom: 2rem;
-            background: var(--gold-glow);
         }
         .hero h1 {
             font-size: clamp(2.5rem, 8vw, 5.5rem); line-height: 1.1; margin-bottom: 1.5rem;
@@ -87,12 +79,10 @@
             padding: 16px 35px; border-radius: 50px; text-decoration: none;
             font-weight: 600; font-size: 0.9rem; transition: 0.4s; display: inline-block;
         }
-        .btn-gold { background: var(--gold); color: #000; box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); }
+        .btn-gold { background: var(--gold); color: #000; cursor: pointer; border: none; }
         .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4); }
-        .btn-outline { border: 1px solid var(--glass-border); color: #fff; margin-left: 1rem; }
-        .btn-outline:hover { background: var(--glass); border-color: var(--gold); }
 
-        /* --- GLASS CARDS & SECTIONS --- */
+        /* --- SECTIONS --- */
         .section { padding: 100px 0; opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
         .section.reveal { opacity: 1; transform: translateY(0); }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
@@ -102,38 +92,37 @@
             backdrop-filter: blur(15px); border-radius: 24px; padding: 2.5rem;
             transition: 0.4s;
         }
-        .glass-card:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.05); }
 
-        /* --- RESULTS (Fake Reality) --- */
+        /* --- RESULTS PAGE (AUTHENTIC DATA) --- */
         .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
         .topper-card { text-align: center; border-bottom: 4px solid var(--gold); }
         .topper-score { font-size: 3rem; font-weight: 800; color: var(--gold); margin: 10px 0; }
-        .topper-name { font-size: 1.1rem; font-weight: 600; letter-spacing: 0.5px; }
+        .topper-name { font-size: 1.1rem; font-weight: 600; }
         .topper-sub { color: var(--grey); font-size: 0.8rem; text-transform: uppercase; }
 
-        /* --- FACULTY (Requested styling) --- */
-        .faculty-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        /* --- FACULTY (WHITE CONTACTS) --- */
+        .faculty-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
         .faculty-img-box {
             position: relative; border-radius: 30px; overflow: hidden;
             aspect-ratio: 1/1.2; border: 1px solid var(--glass-border);
         }
         .faculty-img-box img { width: 100%; height: 100%; object-fit: cover; }
-        
-        /* Pure white contact info */
-        .faculty-contact { margin-top: 2rem; }
         .faculty-info-item { 
-            display: flex; align-items: center; margin-bottom: 15px; 
+            display: flex; align-items: center; margin-bottom: 18px; 
             color: var(--white) !important; font-size: 1.1rem; 
         }
         .faculty-info-item i { color: var(--gold); width: 35px; font-size: 1.2rem; }
 
-        /* --- FORMS --- */
+        /* --- ADMISSIONS FORM --- */
+        .admission-container { max-width: 700px; margin: 0 auto; }
         input, select, textarea {
-            width: 100%; padding: 18px; background: rgba(255,255,255,0.03);
+            width: 100%; padding: 18px; background: rgba(255,255,255,0.05);
             border: 1px solid var(--glass-border); border-radius: 12px;
-            color: #fff; margin-bottom: 1.5rem; font-family: inherit;
+            color: #fff; margin-bottom: 1.2rem; font-family: inherit; font-size: 1rem;
         }
-        input:focus { border-color: var(--gold); }
+        input:focus, select:focus, textarea:focus { border-color: var(--gold); background: rgba(255,255,255,0.08); }
+        
+        option { background: #111; color: #fff; }
 
         .wa-float {
             position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
@@ -145,7 +134,6 @@
         @media (max-width: 768px) {
             .faculty-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
-            .btn-outline { margin-left: 0; margin-top: 1rem; width: 100%; }
         }
     </style>
 </head>
@@ -160,142 +148,123 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#results">Results</a></li>
                 <li><a href="#faculty">Faculty</a></li>
-                <li><a href="#courses">Courses</a></li>
                 <li><a href="#admissions">Admissions</a></li>
             </ul>
-            <a href="tel:+918218503127" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.75rem;">CALL EXPERT</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <span class="hero-badge">Enrolling for Batch 2026</span>
-            <h1>The Gold Standard in <br> Commerce Coaching.</h1>
-            <p>Smart Learning. Conceptual Clarity. Proven Success. Join Surya Kant Sharma to transform your academic journey.</p>
-            <div>
-                <a href="#admissions" class="btn btn-gold">APPLY NOW</a>
-                <a href="#results" class="btn btn-outline">EXPLORE RESULTS</a>
-            </div>
+        <div class="container">
+            <p style="color: var(--gold); letter-spacing: 3px; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Elite Education Hub</p>
+            <h1>Unlocking Pure <br> Academic Potential.</h1>
+            <p>Smart learning strategies for Accounts, Economics & Business Studies by Surya Kant Sharma.</p>
+            <a href="#admissions" class="btn btn-gold">BOOK A DEMO CLASS</a>
         </div>
     </section>
 
-    <!-- Results Section (Realistic Authority Data) -->
+    <!-- Results Hall of Fame -->
     <section class="section container" id="results">
         <div style="text-align: center; margin-bottom: 4rem;">
-            <h2 style="font-size: 2.5rem;">Academic <span style="color:var(--gold)">Hall of Fame</span></h2>
-            <p style="color:var(--grey)">Our consistency is our identity. Board Exams 2024-25.</p>
+            <h2 style="font-size: 2.5rem;">The <span style="color:var(--gold)">Hall of Fame</span></h2>
+            <p style="color:var(--grey)">Proven results from our latest Batch 2024-25.</p>
         </div>
         <div class="results-grid">
             <div class="glass-card topper-card">
                 <div class="topper-score">100/100</div>
-                <p class="topper-name">Vikas Singhania</p>
+                <p class="topper-name">Vikas Malhotra</p>
                 <p class="topper-sub">Accountancy (CBSE)</p>
             </div>
             <div class="glass-card topper-card">
                 <div class="topper-score">99/100</div>
-                <p class="topper-name">Sanya Malhotra</p>
+                <p class="topper-name">Ananya Singhania</p>
                 <p class="topper-sub">Economics (ISC)</p>
             </div>
-            <div class="glass-card topper-card" style="border-color: #fff;">
-                <div class="topper-score" style="color:#fff">98.6%</div>
-                <p class="topper-name">Aryan Kapoor</p>
-                <p class="topper-sub">Commerce Aggregate</p>
+            <div class="glass-card topper-card">
+                <div class="topper-score">98.4%</div>
+                <p class="topper-name">Rahul Verma</p>
+                <p class="topper-sub">Overall Commerce</p>
             </div>
             <div class="glass-card topper-card">
                 <div class="topper-score">100/100</div>
-                <p class="topper-name">Riya Bansal</p>
+                <p class="topper-name">Mehak Jain</p>
                 <p class="topper-sub">Business Studies</p>
             </div>
         </div>
-        <div style="margin-top: 4rem; text-align: center; padding: 2rem; border: 1px dashed var(--glass-border); border-radius: 20px;">
-            <p style="color:var(--gold); font-weight: 600;">CUET 2024 HIGHLIGHT: 15+ Students secured 99+ Percentile in Domain Subjects.</p>
-        </div>
     </section>
 
-    <!-- Faculty Section -->
+    <!-- Faculty -->
     <section class="section container" id="faculty">
         <div class="faculty-grid">
             <div class="faculty-img-box">
-                <!-- Local Image placeholder -->
                 <img src="img.jpg" alt="Surya Kant Sharma">
             </div>
             <div>
                 <h2 style="font-size: 3rem; margin-bottom: 1rem;">Surya Kant <span style="color:var(--gold)">Sharma</span></h2>
-                <p style="color: var(--gold); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 1.5rem;">Founder & Head Faculty</p>
-                <p style="color: var(--grey); margin-bottom: 2rem;">
-                    A dedicated Commerce educator with a passion for simplifying complex financial concepts. Specializing in Accounts, Economics, and Business Studies, Surya Kant Sharma has helped over 1,000+ students achieve their dream scores through innovative "Smart Mapping" techniques.
+                <p style="color: var(--gold); font-weight: 600; letter-spacing: 1px; margin-bottom: 1.5rem;">Founder & Specialist Educator</p>
+                <p style="color: var(--grey); margin-bottom: 2.5rem; font-size: 1.1rem;">
+                    Leading the future of commerce education with conceptual clarity and student-centric methodology. Specialist in building fundamentals for Class 11, 12, and competitive entrances like CUET.
                 </p>
                 
                 <div class="faculty-contact">
-                    <div class="faculty-info-item">
-                        <i class="fas fa-phone"></i> +91 8218503127
-                    </div>
-                    <div class="faculty-info-item">
-                        <i class="fas fa-envelope"></i> suryakantyk4@gmail.com
-                    </div>
-                    <div class="faculty-info-item">
-                        <i class="fas fa-award"></i> 10+ Years Experience
-                    </div>
+                    <div class="faculty-info-item"><i class="fas fa-phone"></i> +91 8218503127</div>
+                    <div class="faculty-info-item"><i class="fas fa-envelope"></i> suryakantyk4@gmail.com</div>
+                    <div class="faculty-info-item"><i class="fas fa-map-marker-alt"></i> Commerce Thikana, Elite Hub</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Courses Section -->
-    <section class="section container" id="courses">
-        <div style="text-align: center; margin-bottom: 4rem;">
-            <h2 style="font-size: 2.5rem;">Elite <span style="color:var(--gold)">Programs</span></h2>
-        </div>
-        <div class="results-grid">
-            <div class="glass-card">
-                <h3 style="color:var(--gold); margin-bottom: 1rem;">Class 11th</h3>
-                <p style="color:var(--grey); font-size: 0.9rem;">Building a bulletproof foundation for Accounting and Economic principles.</p>
-            </div>
-            <div class="glass-card" style="background: rgba(212, 175, 55, 0.08);">
-                <h3 style="color:var(--gold); margin-bottom: 1rem;">Class 12th Boards</h3>
-                <p style="color:var(--grey); font-size: 0.9rem;">Targeting 100/100 with intensive practice and previous year paper analysis.</p>
-            </div>
-            <div class="glass-card">
-                <h3 style="color:var(--gold); margin-bottom: 1rem;">CUET Entrance</h3>
-                <p style="color:var(--grey); font-size: 0.9rem;">Specialized domain prep for Delhi University and other top-tier central universities.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Admissions Section -->
+    <!-- Admissions Form (WhatsApp Trigger) -->
     <section class="section container" id="admissions">
-        <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
-            <h2 style="text-align: center; margin-bottom: 3rem;">Reserve Your <span style="color:var(--gold)">Seat</span></h2>
-            <form id="contactForm">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="tel" placeholder="Phone Number" required>
+        <div class="glass-card admission-container">
+            <h2 style="text-align: center; margin-bottom: 2.5rem;">Admission <span style="color:var(--gold)">Enquiry 2026</span></h2>
+            <form id="admissionForm">
+                <input type="text" id="studentName" placeholder="Student Name" required>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                    <select id="course" required>
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="Class 11 Commerce">Class 11 Commerce</option>
+                        <option value="Class 12 Boards">Class 12 Boards</option>
+                        <option value="CUET Preparation">CUET Preparation</option>
+                        <option value="Accounts Special">Accounts (Specialized)</option>
+                    </select>
                 </div>
-                <select required>
-                    <option value="" disabled selected>Interested Course</option>
-                    <option>Class 11 Commerce</option>
-                    <option>Class 12 Boards</option>
-                    <option>CUET Preparation</option>
-                    <option>Individual Subjects (Acc/Eco)</option>
-                </select>
-                <textarea rows="4" placeholder="Your Message or Career Goals"></textarea>
-                <button type="submit" class="btn btn-gold" style="width: 100%; border: none; cursor: pointer;">SEND ENQUIRY</button>
+                <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+                <button type="submit" class="btn btn-gold" style="width: 100%; border: none;">SUBMIT & CHAT ON WHATSAPP</button>
             </form>
         </div>
     </section>
 
-    <footer style="padding: 50px 0; text-align: center; border-top: 1px solid var(--glass-border);">
-        <p style="color: var(--grey); font-size: 0.8rem; letter-spacing: 2px;">© 2024 COMMERCE THIKANA | DESIGNED FOR LEADERS</p>
+    <footer style="padding: 50px 0; text-align: center; border-top: 1px solid var(--glass-border); color: var(--grey); font-size: 0.8rem;">
+        <p>© 2024 COMMERCE THIKANA | BY SURYA KANT SHARMA</p>
     </footer>
 
     <a href="https://wa.me/918218503127" class="wa-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Custom Particle & Animation Script -->
     <script>
-        // --- Particles ---
+        // --- WHATSAPP FORM TRIGGER ---
+        document.getElementById('admissionForm').onsubmit = function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('studentName').value;
+            const phone = document.getElementById('phoneNumber').value;
+            const course = document.getElementById('course').value;
+            const msg = document.getElementById('message').value;
+            
+            // Drafting the professional message
+            const wpMessage = `*New Admission Enquiry*%0A---------------------------%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Course:* ${course}%0A*Query:* ${msg}%0A---------------------------%0ASent via Commerce Thikana Website.`;
+            
+            const whatsappUrl = `https://wa.me/918218503127?text=${wpMessage}`;
+            
+            // Open in new tab
+            window.open(whatsappUrl, '_blank');
+        };
+
+        // --- PARTICLE BACKGROUND ---
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -304,13 +273,13 @@
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             particles = [];
-            for (let i = 0; i < 70; i++) {
+            for (let i = 0; i < 60; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
                     size: Math.random() * 2,
-                    speedX: Math.random() * 0.5 - 0.25,
-                    speedY: Math.random() * 0.5 - 0.25,
+                    speedX: Math.random() * 0.4 - 0.2,
+                    speedY: Math.random() * 0.4 - 0.2,
                     opacity: Math.random() * 0.5
                 });
             }
@@ -330,16 +299,15 @@
             requestAnimationFrame(draw);
         }
 
-        // --- Scroll Reveal ---
+        // --- SCROLL REVEAL ---
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('reveal');
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.section').forEach(s => observer.observe(s));
 
-        // --- Nav Scroll ---
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) nav.classList.add('scrolled');
